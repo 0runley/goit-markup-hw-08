@@ -1,0 +1,195 @@
+:root{
+    --primary-font-family:'Roboto', sans-serif;
+    --secondary-font-family:'Raleway', sans-serif;
+    --accent-color: #2196F3;
+    --main-letter-spacing: 0.03em;
+}
+.link{
+    text-decoration: none;
+}
+.list{
+    list-style: none;
+}
+body{
+    font-family: var(--primary-font-family);
+    background-color: #F5F4FA;
+    letter-spacing: var(--main-letter-spacing);
+}
+/* ############### HEADER ################# */
+.logo {
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    color: #000000;
+}
+.part-logo {
+    color: var(--accent-color);
+}
+.menu-link{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: #212121;
+}
+.menu-link:hover,
+.menu-link:focus{
+    color: var(--accent-color);
+}
+.phone-number{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: #757575;
+}
+.phone-number:hover,
+.phone-number:focus{
+    color: var(--accent-color);
+}
+.email-address{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #757575;
+}
+.email-address:hover,
+.email-address:focus{
+    color: var(--accent-color);
+} 
+/* ################## /HEADER ################ */
+/* ############### HERO ################## */
+.hero {
+    background-color: #2F303A;
+}
+.modal-btn{
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    cursor: pointer;
+    background: var(--accent-color);
+}
+.modal-btn:hover,
+.modal-btn:focus{
+    background: #188CE8;
+}
+.hero-title{
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+}
+/* ################ /HERO ################# */
+/* ########### PECULARITIES ############# */
+.pecularities-title{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: #212121;
+}
+.suptitle{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: #757575;
+}
+/* ########### /PECULARITIES ############## */
+/* ########### WHAT WE ARE DOING ########### */
+.our-occupation-title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: #212121;
+}
+/* ########### /WHAT WE ARE DOING ########## */
+/* ############ OUR TEAM ############### */
+.our-team-title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: #212121;
+}
+.team-name{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    color: #212121;
+}
+.team-profession{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #757575;
+}
+/* ######## /OUR TEAM ######### */
+/* ############ OUR WORKS ############## */
+.cards-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: #212121;
+}
+.cards-suptitle{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+    color: #757575;
+}
+/* ########### /OUR WORKS ############ */
+/* ########### FILTERS ########## */
+.filters-btn{
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    color: #212121;
+    cursor: pointer;
+    background: #F5F4FA;
+    border-radius: 4px;
+}
+.filters-btn:hover,
+.filters-btn:focus{
+    background-color: var(--accent-color);
+    color: #fff;
+}
+/* ########### /FILTERS ########### */
+/*##############FOOTER############*/
+.address{
+    font-style: normal;
+}
+.footer{
+    background-color: #2F303A;
+}
+.logo-footer{
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: #FFFFFF;
+}
+.footer-link{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: #FFFFFF;
+}
+.footer-link:hover,
+.footer-link:focus{
+    color: var(--accent-color);
+}
+/*#############/FOOTER############*/

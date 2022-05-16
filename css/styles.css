@@ -12,7 +12,7 @@
 }
 body{
     font-family: var(--primary-font-family);
-    background-color: #F5F4FA;
+    
     letter-spacing: var(--main-letter-spacing);
 }
 /* ############### HEADER ################# */
@@ -113,6 +113,9 @@ body{
 }
 /* ########### /WHAT WE ARE DOING ########## */
 /* ############ OUR TEAM ############### */
+.our-team{
+    background-color: #F5F4FA;
+}
 .our-team-title{
     font-weight: 700;
     font-size: 36px;
@@ -182,14 +185,24 @@ body{
     line-height: 1.19;
     color: #FFFFFF;
 }
-.footer-link{
+.footer-contact{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: rgba(255, 255, 255, 0.6);
+}
+.footer-map{
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     color: #FFFFFF;
 }
-.footer-link:hover,
-.footer-link:focus{
+.footer-contact:hover,
+.footer-contact:focus{
+    color: var(--accent-color);
+}
+.footer-map:hover,
+.footer-map:focus {
     color: var(--accent-color);
 }
 /*#############/FOOTER############*/

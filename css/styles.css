@@ -139,6 +139,9 @@ body{
 }
 /* ######## /OUR TEAM ######### */
 /* ############ OUR WORKS ############## */
+.portfolio{
+    background-color: #EEEEEE;
+}
 .cards-title{
     font-weight: 700;
     font-size: 18px;

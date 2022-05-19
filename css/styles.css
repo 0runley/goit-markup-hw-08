@@ -59,6 +59,9 @@ body{
 .email-address:focus{
     color: var(--accent-color);
 } 
+.current {
+    color: var(--accent-color);
+}
 /* ################## /HEADER ################ */
 /* ############### HERO ################## */
 .hero {
@@ -157,6 +160,9 @@ body{
 }
 /* ########### /OUR WORKS ############ */
 /* ########### FILTERS ########## */
+.filters-btn-active{
+    color: var();
+}
 .filters-btn{
     font-family: inherit;
     font-weight: 500;
@@ -209,3 +215,4 @@ body{
     color: var(--accent-color);
 }
 /*#############/FOOTER############*/
+

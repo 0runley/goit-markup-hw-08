@@ -4,6 +4,36 @@
     --accent-color: #2196F3;
     --main-letter-spacing: 0.03em;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ul, 
+ol{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+img{
+    display: block;
+}
+.container{
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 .link{
     text-decoration: none;
 }
@@ -16,15 +46,37 @@ body{
     letter-spacing: var(--main-letter-spacing);
 }
 /* ############### HEADER ################# */
+.page-header{
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+}
 .logo {
     font-family: var(--secondary-font-family);
     font-weight: 700;
     font-size: 26px;
     line-height: 31px;
     color: #000000;
+    margin-right: 95px;
 }
 .part-logo {
     color: var(--accent-color);
+}
+.menu-item:not(:last-child){
+    margin-right: 50px;
 }
 .menu-link{
     font-weight: 500;
@@ -43,6 +95,7 @@ body{
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: #757575;
+    margin-left: 30px;
 }
 .phone-number:hover,
 .phone-number:focus{
@@ -66,6 +119,9 @@ body{
 /* ############### HERO ################## */
 .hero {
     background-color: #2F303A;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
 }
 .modal-btn{
     font-family: inherit;
@@ -76,12 +132,16 @@ body{
     color: #FFFFFF;
     cursor: pointer;
     background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 8px 30px;
 }
 .modal-btn:hover,
 .modal-btn:focus{
     background: #188CE8;
 }
 .hero-title{
+    width: 696;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -89,33 +149,81 @@ body{
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #fff;
+    margin-bottom: 30px;
+}
+.hero-container{
+
 }
 /* ################ /HERO ################# */
 /* ########### PECULARITIES ############# */
+.pecularities-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+.pecularities-link{
+    flex-basis: calc(100% / 4 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+
+}
 .pecularities-title{
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     color: #212121;
+    margin-bottom: 10px;
+    
 }
 .suptitle{
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     color: #757575;
+    
 }
 /* ########### /PECULARITIES ############## */
 /* ########### WHAT WE ARE DOING ########### */
+.our-occupation{
+    padding-top: 0;
+}
+.our-occupation-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+.works-item{
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
 .our-occupation-title{
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     color: #212121;
+    padding-bottom: 50px;
 }
 /* ########### /WHAT WE ARE DOING ########## */
 /* ############ OUR TEAM ############### */
+.our-team-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+.our-team-item{
+    flex-basis: calc(100% / 4 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
 .our-team{
     background-color: #F5F4FA;
 }
@@ -125,6 +233,8 @@ body{
     line-height: 1.17;
     text-align: center;
     color: #212121;
+    
+    padding-bottom: 50px;
 }
 .team-name{
     font-weight: 500;
@@ -132,6 +242,8 @@ body{
     line-height: 1.19;
     text-align: center;
     color: #212121;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .team-profession{
     font-weight: 400;
@@ -139,18 +251,42 @@ body{
     line-height: 19px;
     text-align: center;
     color: #757575;
+    padding-bottom: 30px;
 }
 /* ######## /OUR TEAM ######### */
 /* ############ OUR WORKS ############## */
-.portfolio{
-    background-color: #EEEEEE;
+.portfolio-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
 }
+.portfolio-item{
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.portfolio-card-info{
+    padding: 20px 24px;
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+}
+.btn-list{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.btn-item:not(:last-child){
+    margin-right: 8px;
+}
+    
 .cards-title{
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: #212121;
+    
 }
 .cards-suptitle{
     font-weight: 400;
@@ -164,6 +300,7 @@ body{
     color: var();
 }
 .filters-btn{
+    padding: 6px 22px;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -173,16 +310,25 @@ body{
     cursor: pointer;
     background: #F5F4FA;
     border-radius: 4px;
+    border: none;
 }
+.filters-btn-active,
 .filters-btn:hover,
 .filters-btn:focus{
     background-color: var(--accent-color);
     color: #fff;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
+
 /* ########### /FILTERS ########### */
 /*##############FOOTER############*/
 .address{
     font-style: normal;
+}
+.footer-list{
+    padding-bottom: 60px;
 }
 .footer{
     background-color: #2F303A;
@@ -193,6 +339,8 @@ body{
     font-size: 26px;
     line-height: 1.19;
     color: #FFFFFF;
+    padding-top: 60px;
+    padding-bottom: 20px;
 }
 .footer-contact{
     font-weight: 400;

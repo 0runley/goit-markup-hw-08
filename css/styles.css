@@ -141,7 +141,7 @@ body{
     background: #188CE8;
 }
 .hero-title{
-    width: 696;
+    
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -297,7 +297,7 @@ body{
 /* ########### /OUR WORKS ############ */
 /* ########### FILTERS ########## */
 .filters-btn-active{
-    color: var();
+    color: var(--accent-color);
 }
 .filters-btn{
     padding: 6px 22px;

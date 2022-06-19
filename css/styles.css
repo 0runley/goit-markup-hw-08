@@ -165,6 +165,7 @@ body{
 /* ############### HERO ################## */
 .hero {
     max-width: 1600px;
+    margin: 0 auto;
     background-color: #2F303A;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -625,7 +626,7 @@ body{
     border-radius: 50%;
     color: #FFFFFF;
     background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-list-link:hover,
 .footer-list-link:focus{
@@ -650,7 +651,7 @@ body{
     background-color: rgba(0, 0, 0, 0.2);
 
     opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {

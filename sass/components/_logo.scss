@@ -1,0 +1,18 @@
+.logo {
+    display: inline-block;
+
+    font-family: Raleway;
+    // font-size: 26px;
+    // line-height: 1.19;
+    // letter-spacing: 0.03em;
+    @include font(700, 24px, 1.17, 0.03em);
+    color: #000000;
+
+    &__text--accent {
+        color: var(--accent-color);
+    }
+
+    @include desk {
+        @include font(null, 26px, 1.19, null);
+    }
+}

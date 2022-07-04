@@ -1,34 +1,64 @@
 .address {
   font-style: normal;
 }
-.footer-item:not(:last-child) {
-  margin-bottom: 9px;
+.address__item{
+  &:not(:last-child) {
+    // margin-bottom: 9px;
+    margin-bottom: 8px;
+  }
+
+  @include desk {
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
 }
 .footer {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer-container {
-  display: flex;
-  align-items: baseline;
+.footer__container {
+  // display: flex;
+  // align-items: baseline;
+  text-align: center;
+  @include tab {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+  
+    @include desk {
+      @include centrFlex();
+      align-items: baseline;
+      justify-content: space-between;
+      text-align: start;
+    }
 }
-.logo-footer {
-  display: inline-block;
-  font-family: var(--secondary-font-family);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  color: #ffffff;
+
+.footer__logo {
   margin-bottom: 20px;
 }
-.footer-logo-contact {
-  margin-right: 70px;
+.footer__logo--white {
+  color: #ffffff;
 }
-.footer-contact {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+.footer__contact {
+  margin-bottom: 60px;
+
+  @include tab {
+    margin: 0 165px 0 0;
+  }
+
+  @include desk {
+    margin: 0;
+  }
+}
+.address__contact {
+  @include font(null, 14px, 1.71, 0.03em);
+  // font-weight: 400;
+  // font-size: 14px;
+  // line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -37,10 +67,11 @@
     color: var(--accent-color);
   }
 }
-.footer-map {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+.address__map {
+  @include font(null, 14px, 1.71, 0.03em);
+  // font-weight: 400;
+  // font-size: 14px;
+  // line-height: 1.71;
   color: #ffffff;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -49,8 +80,14 @@
     color: var(--accent-color);
   }
 }
+.footer__socials {
+  margin-bottom: 60px;
 
-.join-title {
+  @include tab {
+    margin-bottom: 0;
+  }
+}
+.footer__suptitle {
   display: inline-block;
   font-family: 'Roboto';
   font-style: normal;
@@ -62,13 +99,11 @@
   color: #ffffff;
   margin-bottom: 20px;
 }
-.footer-icon-list {
-  display: flex;
+.footer__list {
+  @include centrFlex();
 }
-.footer-list-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer__link {
+  @include centrFlex();
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -83,13 +118,15 @@
   }
 }
 
-.footer-list-icon {
+.footer__icon {
   fill: currentColor;
 }
-.footer-list-item:not(:last-child) {
-  margin-right: 10px;
+.footer__icon {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
-.footer-form-title {
+.footer__form-title {
   display: inline-block;
   margin-bottom: 20px;
   font-weight: 700;
@@ -99,15 +136,22 @@
   text-transform: uppercase;
   color: #f5f4fa;
 }
-.footer-form {
-  display: flex;
-  align-items: center;
+.footer__form {
+  // display: flex;
+    // align-items: center;
+    @include desk {
+      display: flex;
+      align-items: center;
+    }
 }
-.footer-input {
-  width: 358px;
+.footer__input {
+  margin-bottom: 20px;
+  // width: 358px;
+  display: block;
+  width: 100%;
   height: 50px;
   padding: 0 16px;
-  margin-right: 12px;
+  // margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: transparent;
@@ -126,9 +170,18 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
   }
+    @include tab {
+      width: 450px;
+    }
+  
+    @include desk {
+      width: 358px;
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
 }
 
-.footer-btn {
+.footer__btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -148,12 +201,20 @@
   &:focus {
     background-color: #188ce8;
   }
+  
 }
-.footer-icon-send {
+.footer__icon-send {
   margin-left: 10px;
   fill: currentColor;
 }
 
-.footer-send-form {
-  margin-left: 93px;
+.footer__send-form {
+  // margin-left: 93px;
+  @include tab {
+      margin-top: 60px;
+    }
+  
+    @include desk {
+      margin-top: 0;
+    }
 }

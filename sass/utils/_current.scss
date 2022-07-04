@@ -1,0 +1,15 @@
+.current {
+    position: relative;
+    color: var(--accent-color);
+
+    &::after {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -1px;
+        height: 4px;
+        background-color: var(--accent-color);
+        content: '';
+        border-radius: 2px;
+    }
+}

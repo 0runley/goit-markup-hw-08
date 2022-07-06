@@ -8,7 +8,7 @@
   text-align: center;
   // letter-spacing: 0.03em;
   color: #212121;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   @include tel {
       margin-bottom: 12px;
   
@@ -19,18 +19,40 @@
       @include font(null, null, 1.15, null);
     }
 }
-.contact-form {
-  display: flex;
-  flex-direction: column;
-}
+// .contact-form {
+//   display: flex;
+//   flex-direction: column;
+// }
 .contact-form__field {
   position: relative;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  &:focus-within .contact-form__input {
+      border-color: var(--accent-color);
+    }
+  
+    &:focus-within .contact-form__icon {
+      color: var(--accent-color);
+    }
+  
+    @media screen and (max-width: 767px) {
+      &:focus-within .contact-form__field-span {
+        color: var(--accent-color);
+      }
+    }
+  
+    @include tel {
+      margin-bottom: 10px;
+    }
 }
 .contact-form__field-text {
   display: block;
   margin-bottom: 20px;
+  @media screen and (max-width: 767px) {
+      &:focus-within .contact-form__field-span {
+        color: var(--accent-color);
+      }
+    }
 }
 .contact-form__field-span {
   font-family: 'Roboto';
@@ -40,6 +62,9 @@
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #757575;
+  @include tel {
+      margin-bottom: 4px;
+  }
 }
 // .contact-form-input-wrapper {
 //   position: relative;

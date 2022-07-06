@@ -83,17 +83,17 @@ body {
 }
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    min-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    min-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    min-width: 1200px;
   }
 }
 
@@ -112,9 +112,10 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -188,7 +189,7 @@ body {
   font-style: normal;
   text-align: center;
   color: #212121;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 @media screen and (min-width: 480px) {
   .form-title {
@@ -204,20 +205,36 @@ body {
   }
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-}
-
 .contact-form__field {
   position: relative;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+}
+.contact-form__field:focus-within .contact-form__input {
+  border-color: var(--accent-color);
+}
+.contact-form__field:focus-within .contact-form__icon {
+  color: var(--accent-color);
+}
+@media screen and (max-width: 767px) {
+  .contact-form__field:focus-within .contact-form__field-span {
+    color: var(--accent-color);
+  }
+}
+@media screen and (min-width: 480px) {
+  .contact-form__field {
+    margin-bottom: 10px;
+  }
 }
 
 .contact-form__field-text {
   display: block;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .contact-form__field-text:focus-within .contact-form__field-span {
+    color: var(--accent-color);
+  }
 }
 
 .contact-form__field-span {
@@ -228,6 +245,11 @@ body {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #757575;
+}
+@media screen and (min-width: 480px) {
+  .contact-form__field-span {
+    margin-bottom: 4px;
+  }
 }
 
 .contact-form__input {
@@ -858,13 +880,20 @@ body {
   height: 100%;
   padding: 0 24px;
   opacity: 0;
+  overflow-y: auto;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 380px) {
+  .portfolio__overlay {
+    display: block;
+    padding: 28px 24px;
+  }
 }
 
 .portfolio__overlay-text {
   font-size: 18px;
-  line-height: 1.56;
+  line-height: 1.55;
   letter-spacing: 0.03em;
   color: #ffffff;
 }
